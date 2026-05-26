@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* The line is now in the main container and is stretched to 100% */
+.header-container {
+    border-bottom: 1px solid #E5E7EB;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon-hamburger,
+.icon-search-mobile,
+.icon-profile,
+.icon-cart {
+    width: 28px;
+    height: 28px;
+    stroke: #000;
+    stroke-width: 1.7;
+}
+
+.logo-small {
+    width: 32px;
+    height: 32px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 998;
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 100vh;
+    background: #23201E;
+    z-index: 60;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #49494a;
+}
+
+.sidebar-close,
+.sidebar-cart {
+    width: 28px;
+    height: 28px;
+    stroke: #ff6200;
+    stroke-width: 1.7;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 32px;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    align-self: flex-start;
+    text-align: center;
+    background-color: #ff6200;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 40px;
+}
+
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    padding: 24px 24px;
+    gap: 32px;
+}
+
+.sidebar-footer a {
+    width: 18px;
+    height: 18px;
+}
+
+.sidebar-footer a svg {
+    fill: white;
+    opacity: 0.5;
+}
+
+.tablet-search-bar {
+    display: none;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.desktop-search-bar {
+    display: none;
+}
+
+.logo-large {
+    display: none;
+}
+
+
+/* --- TABLET ROOM --- */
+@media (min-width: 768px) {
+    .icon-search-mobile {
+        display: none;
+    }
+
+    .tablet-search-bar {
+        position: relative;
+        display: block;
+        width: 35%;
+    }
+
+    .search-box {
+        border: none;
+        width: 100%;
+        padding: 14px 16px 14px 40px;
+        font-size: 16px;
+        background: #F1F5F9;
+        border-radius: 8px;
+        color: #9CA3AF;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .search-icon {
+        width: 20px;
+        height: 20px;
+        stroke: #9CA3AF;
+        stroke-width: 1.7;
+        position: absolute;
+        left: 8px;
+        top: 14px;
+    }
+}
+
+/* --- DESKTOP ROOM --- */
+@media (min-width: 1150px) {
+    .icon-search-mobile {
+        display: none;
+    }
+
+    .logo-small {
+        display: none;
+    }
+
+    .icon-hamburger {
+        display: none;
+    }
+
+    .desktop-menu {
+        display: block;
+    }
+
+    .logo-large {
+        display: block;
+    }
+
+    .tablet-search-bar {
+        display: none;
+    }
+
+    .main-nav {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 16px 50px;
+    }
+
+    .logo-large {
+        width: 120px;
+        padding-left: 20px;
+    }
+
+    .desktop-menu {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .desktop-menu a {
+        text-decoration: none;
+        color: #374151;
+        font-weight: 600;
+        font-size: 16.5px;
+        letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+        white-space: nowrap; 
+        text-transform: uppercase;
+    }
+
+    .desktop-menu a:hover {
+        color: #ff6200;
+    }
+
+    .desktop-search-bar {
+        position: relative;
+        display: block;
+        width: 350px;
+    }
+
+    .desktop-search-box {
+        border: none;
+        width: 100%;
+        padding: 16px 16px 16px 40px;
+        font-size: 16px;
+        background: #F1F5F9;
+        border-radius: 8px;
+        color: #9CA3AF;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .desktop-search-icon {
+        width: 20px;
+        height: 20px;
+        stroke: #9CA3AF;
+        stroke-width: 1.7;
+        position: absolute;
+        left: 8px;
+        top: 15px;
+    }
+    
+}
+
