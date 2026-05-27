@@ -37,7 +37,7 @@ body {
 }
 
 .icon-hamburger,
-.icon-search-mobile,
+.icon-search,
 .icon-profile,
 .icon-cart {
     width: 28px;
@@ -122,11 +122,12 @@ body {
     gap: 32px;
 }
 
-.sidebar-footer a {
+.social-icon {
     width: 18px;
     height: 18px;
 }
 
+/* Social İcon settings */
 .sidebar-footer a svg {
     fill: white;
     opacity: 0.5;
@@ -151,7 +152,7 @@ body {
 
 /* --- TABLET ROOM --- */
 @media (min-width: 768px) {
-    .icon-search-mobile {
+    .icon-search {
         display: none;
     }
 
@@ -173,7 +174,12 @@ body {
         outline: none;
     }
 
-    .search-icon {
+    .search-box:focus {
+       outline: 1.7px solid #ff6200;
+       outline-offset: 2px;
+   }
+
+    .icon-search-bar {
         width: 20px;
         height: 20px;
         stroke: #9CA3AF;
@@ -182,11 +188,12 @@ body {
         left: 8px;
         top: 14px;
     }
+
 }
 
 /* --- DESKTOP ROOM --- */
 @media (min-width: 1150px) {
-    .icon-search-mobile {
+    .icon-search {
         display: none;
     }
 
@@ -203,7 +210,7 @@ body {
     }
 
     .logo-large {
-        display: block;
+        display: flex;
     }
 
     .tablet-search-bar {
@@ -269,6 +276,20 @@ body {
         left: 8px;
         top: 15px;
     }
+
+    
+    .desktop-search-box:focus {
+       outline: 1.7px solid #ff6200;
+       outline-offset: 2px;
+   }
+
+   .icon-search:hover,
+    .icon-profile:hover,
+    .icon-cart:hover,
+    .desktop-search-icon:hover {
+        stroke: #ff6200;
+        cursor: pointer;
+       }
     
 }
 
