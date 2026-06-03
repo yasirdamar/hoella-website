@@ -84,6 +84,15 @@
   </g>
 </symbol>
 
+<!-- <symbol id="icon-plus-circle" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</symbol> -->
+
+<symbol id="icon-plus-plain" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+</symbol>
+
+
 
 
 
