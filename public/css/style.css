@@ -15,6 +15,13 @@
     --color-surface: #F3F4F6;
     --color-gray-400: #9CA3AF;
     --color-gray-900: #212121;
+    --color-amber: #FFB400;
+}
+
+:root {
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.20);
+    --shadow-md: 0 8px 18px rgba(0, 0, 0, 0.22);
+    --shadow-lg: 0 18px 35px rgba(0, 0, 0, 0.28);
 }
 
 a {
@@ -241,6 +248,7 @@ svg[class*="icon-"] {
     font-size: 24px;
     font-weight: bold;
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
 }
 
 
@@ -273,7 +281,7 @@ svg[class*="icon-"] {
     min-height: 75%;
     background-color: var(--color-secondary);
     border-radius: 8px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-lg);
     z-index: 1;
 }
 
@@ -349,7 +357,7 @@ svg[class*="icon-"] {
 }
 
 .categories-section .categories-heading {
-    font-family: "League Spartan";
+    font-family: "League Spartan", sans-serif;
     padding: 0 24px;
     font-size: 20px;
     line-height: 1;
@@ -381,7 +389,7 @@ svg[class*="icon-"] {
     width: 120px;
     height: 160px;
     background-color: var(--color-white);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-md);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -435,7 +443,7 @@ svg[class*="icon-"] {
     flex-direction: column;
     justify-content: center;
     max-width: 360px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--shadow-md);
     border-radius: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -462,6 +470,7 @@ svg[class*="icon-"] {
     stroke-width: 2.5;
     fill: none;
 }
+
 .btn-icon-add:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
@@ -677,6 +686,281 @@ svg[class*="icon-"] {
     grid-column: span 2;
 }
 
+/* =============================== */
+/* ---  howItWork SECTION      --- */
+/* =============================== */
+
+.how-it-works-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 24px;
+    background-color: var(--color-white);
+}
+
+.hiw-heading {
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    max-width: 368px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.hiw-timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "left-content"
+        "box-content"
+        "footer";
+    gap: 44px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.hiw-left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    width: 100%;
+    min-height: 110px;
+}
+
+.hiw-item-text {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 360px;
+}
+
+.hiw-box-content {
+    width: 100%;
+    max-width: 360px;
+    position: relative;
+    border-radius: 16px;
+}
+
+.hiw-progress-track {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-gray-100);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.hiw-progress-fill {
+    height: 100%;
+    width: 0;
+}
+
+.first-text .hiw-progress-fill {
+    background-color: var(--color-primary);
+}
+
+.second-text .hiw-progress-fill {
+    background-color: var(--color-secondary);
+}
+
+.third-text .hiw-progress-fill {
+    background-color: var(--color-amber);
+}
+
+
+
+.hiw-heading {
+    grid-area: header;
+}
+
+.hiw-left-content {
+    grid-area: left-content;
+}
+
+.hiw-box-content {
+    grid-area: box-content;
+    position: relative;
+    width: 100%;
+    height: 260px;
+    box-shadow: var(--shadow-lg);
+}
+
+.hiw-box {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-box {
+    background-color: var(--color-primary);
+}
+
+.second-box {
+    background-color: var(--color-secondary);
+}
+
+.third-box {
+    background-color: var(--color-amber);
+}
+
+.hiw-timeline .btn-blue {
+    grid-area: footer;
+}
+
+
+.hiw-video {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.hiw-number {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.hiw-number--orange {
+    color: var(--color-primary);
+}
+
+.hiw-number--blue {
+    color: var(--color-secondary);
+}
+
+.hiw-number--amber {
+    color: var(--color-amber);
+}
+
+.hiw-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 314px;
+}
+
+.hiw-desc {
+    font-size: 16px;
+}
+
+.hiw-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.btn-blue {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    align-self: center;
+    margin: 0 auto;
+    stroke: var(--color-secondary);
+}
+
+@keyframes hiwCrossfade {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    2% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    35% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hiwProgress {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    33% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    34% {
+        width: 100%;
+        opacity: 0;
+    }
+
+    35% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.hiw-item-text,
+.hiw-box {
+    animation: hiwCrossfade 21s infinite both;
+}
+
+.hiw-progress-fill {
+    animation: hiwProgress 21s infinite both;
+}
+
+.first-text,
+.first-box {
+    animation-delay: 0s;
+}
+
+.second-text,
+.second-box {
+    animation-delay: 7s;
+}
+
+.third-text,
+.third-box {
+    animation-delay: 14s;
+}
+
+.first-text .hiw-progress-fill {
+    animation-delay: 0s;
+}
+
+.second-text .hiw-progress-fill {
+    animation-delay: 7s;
+}
+
+.third-text .hiw-progress-fill {
+    animation-delay: 14s;
+}
+
+
 /* ============================== */
 /* --- TABLET ROOM --- */
 /* ============================== */
@@ -807,7 +1091,7 @@ svg[class*="icon-"] {
     /* ============================== */
     /* ---   LATEST DROP SECTION  --- */
     /* ============================== */
- 
+
     .latest-drops-heading {
         font-size: 40px;
     }
@@ -877,6 +1161,71 @@ svg[class*="icon-"] {
 
     .item-small-2 {
         grid-column: span 1;
+    }
+
+    /* =============================== */
+    /* ---  howItWork SECTION      --- */
+    /* =============================== */
+    .how-it-works-section {
+        padding: 80px 40px;
+    }
+
+    .hiw-heading {
+        font-size: 44px;
+        max-width: 768px;
+    }
+
+
+    .hiw-timeline {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1150px;
+        grid-template-areas:
+            "header header"
+            "left-content box-content"
+            "footer footer";
+        gap: 60px;
+    }
+
+    .hiw-item-text {
+        position: static;
+        animation: none;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    .hiw-box-content {
+        width: 100%;
+        max-width: 500px;
+        height:80%;
+        align-self: center;
+
+    }
+
+    .hiw-video {
+        width: 100%;
+        height: 70%;
+    }
+
+
+    .hiw-number {
+        font-size: 60px;
+    }
+
+    .hiw-text-block {
+        gap: 20px;
+    }
+
+    .hiw-title {
+        font-size: 24px;
+    }
+
+    .hiw-desc {
+        font-size: 20px;
+    }
+
+    .hiw-timeline .btn-blue {
+        margin: 0;
+        justify-self: start;
     }
 
 }
@@ -1129,14 +1478,54 @@ svg[class*="icon-"] {
     .product-drawer {
         padding: 20px 32px;
     }
+
     .product-name {
         font-size: 18px;
     }
+
     .product-price {
         font-size: 18px;
     }
 
+    /* =============================== */
+    /* ---  howItWork SECTION      --- */
+    /* =============================== */
 
+    .how-it-works-section {
+        padding: 100px 24px;
+    }
+
+    .hiw-heading {
+        font-size: 52px;
+    }
+
+    .hiw-timeline {
+        width: 100%;
+        max-width: 1200px;
+        gap: 50px;
+    }
+
+    .hiw-item-text {
+        max-width: 450px;
+    }
+
+    .hiw-box-content {
+        width: 100%;
+        height: 500px;
+    }
+
+    .hiw-text-block {
+        gap: 18px;
+        max-width: 450px;
+    }
+
+    .hiw-title {
+        font-size: 26px;
+    }
+
+    .hiw-desc {
+        font-size: 22px;
+    }
 
 }
 
@@ -1200,5 +1589,16 @@ svg[class*="icon-"] {
 
     .product-card:active .card-img {
         transform: scale(1);
+    }
+
+    .btn-blue:hover {
+        background-color: #0099cc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 179, 255, 0.2);
+    }
+
+    .btn-blue:active {
+        transform: translate(0) scale(0.96);
+        box-shadow: 0 2px 4px rgba(0, 179, 255, 0.1);
     }
 }
