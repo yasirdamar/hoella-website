@@ -14,6 +14,86 @@
     --color-white: #ffffff;
     --color-surface: #F3F4F6;
     --color-gray-400: #9CA3AF;
+    --color-gray-500: #B3B3B3;
+    --color-gray-900: #212121;
+    --color-amber: #FFB400;
+    --color-gray-600: #6B7280;
+    --color-bg-dark: #23201E;
+    --color-text-muted-dark: #3A3A3A;
+
+
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.20);
+    --shadow-md: 0 8px 18px rgba(0, 0, 0, 0.22);
+    --shadow-lg: 0 18px 35px rgba(0, 0, 0, 0.28);
+}
+
+/* ============================== */
+/* --- GLOBAL COMPONENTS ---      */
+/* ============================== */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    height: 56px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--secondary {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn--blue {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    align-self: center;
+    margin: 0 auto;
+    stroke: var(--color-secondary);
+}
+
+@media (hover:hover) {
+    .btn--primary:hover {
+        background-color: #e55800;
+        border-color: #e55800;
+        transform: translateY(-2px);
+    }
+
+    .btn--secondary:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        transform: translateY(-2px);
+    }
+
+    .btn--primary:active,
+    .btn--secondary:active {
+        transform: translate(0) scale(0.96);
+        box-shadow: 0 2px 4px rgba(255, 98, 0, 0.2);
+    }
+
+    .btn--blue:hover {
+        background-color: #0099cc;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 179, 255, 0.2);
+    }
+
+    .btn--blue:active {
+        transform: translate(0) scale(0.96);
+        box-shadow: 0 2px 4px rgba(0, 179, 255, 0.1);
+    }
 }
 
 a {
@@ -172,12 +252,12 @@ svg[class*="icon-"] {
 /* --- HERO SECTION --- */
 /* ============================== */
 
-.hero-section {
+.hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 18px;
-    padding: 0 16px;
+    padding: 12px 24px 48px 24px;
     margin: 16px auto;
 }
 
@@ -194,7 +274,7 @@ svg[class*="icon-"] {
     letter-spacing: -1px;
 }
 
-.hero-features ul {
+.hero__features-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,14 +286,14 @@ svg[class*="icon-"] {
     color: var(--color-gray);
 }
 
-.hero-features ul li {
+.hero__feature-item {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
 }
 
-.hero-features .icon-check {
+.hero__features-list .icon-check {
     width: 16px;
     height: 16px;
     color: var(--color-gray);
@@ -229,32 +309,7 @@ svg[class*="icon-"] {
     margin: 50px 0;
 }
 
-.btn-base {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 360px;
-    height: 56px;
-    border-radius: 12px;
-    font-size: 24px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
 
-
-.btn-primary {
-    background-color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    color: var(--color-white);
-}
-
-
-.btn-secondary {
-    background-color: var(--color-white);
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
-}
 
 .img-primary,
 .img-secondary {
@@ -272,7 +327,7 @@ svg[class*="icon-"] {
     min-height: 75%;
     background-color: var(--color-secondary);
     border-radius: 8px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-lg);
     z-index: 1;
 }
 
@@ -287,19 +342,15 @@ svg[class*="icon-"] {
     z-index: 2;
 }
 
-.hero-trust-badges {
-    display: flex;
-    width: 100%;
-    max-width: 393px;
-    margin-bottom: 48px;
-}
 
-.hero-trust-badges ul {
+
+.hero__trust-list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px 20px;
     width: 100%;
+    max-width: 393px;
     flex-wrap: wrap;
     list-style: none;
     font-size: 14px;
@@ -308,14 +359,14 @@ svg[class*="icon-"] {
     margin: 0;
 }
 
-.hero-trust-badges ul li {
+.hero__trust-item {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
 }
 
-.hero-trust-badges svg {
+.hero__trust-item svg {
     width: 16px;
     height: 16px;
     color: var(--color-gray);
@@ -325,7 +376,7 @@ svg[class*="icon-"] {
     display: none;
 }
 
-.hero-trust-badges .hero-pipe {
+.hero__trust-pipe {
     display: none;
 }
 
@@ -334,7 +385,7 @@ svg[class*="icon-"] {
 /* --- CATEGORIES SECTION --- */
 /* ============================== */
 
-.categories-section {
+.categories {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -347,8 +398,8 @@ svg[class*="icon-"] {
     text-align: center;
 }
 
-.categories-section .categories-heading {
-    font-family: "League Spartan";
+.categories .categories-heading {
+    font-family: "League Spartan", sans-serif;
     padding: 0 24px;
     font-size: 20px;
     line-height: 1;
@@ -358,7 +409,7 @@ svg[class*="icon-"] {
     color: var(--color-primary);
 }
 
-.categories-scroll-wrapper {
+.categories__track {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -367,7 +418,7 @@ svg[class*="icon-"] {
     scrollbar-width: none;
 }
 
-.categories-scroll-wrapper::-webkit-scrollbar {
+.categories__track::-webkit-scrollbar {
     display: none;
 }
 
@@ -380,7 +431,7 @@ svg[class*="icon-"] {
     width: 120px;
     height: 160px;
     background-color: var(--color-white);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-md);
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -395,13 +446,32 @@ svg[class*="icon-"] {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+@media (hover:hover) {
+    .category-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .category-card:hover .category-card-text {
+        color: var(--color-primary);
+    }
+
+    .category-card:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+}
+
 /* ============================== */
 /* --- LATEST DROP SECTION ---    */
 /* ============================== */
+
 .latest-drops {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 40px;
     padding: 60px 24px;
 }
@@ -416,7 +486,7 @@ svg[class*="icon-"] {
     color: var(--color-primary);
 }
 
-.drops-wrapper {
+.latest-drops__grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -424,7 +494,7 @@ svg[class*="icon-"] {
     width: 100%;
 }
 
-.view-all-btn {
+.latest-drops__btn {
     margin-top: 10px;
 }
 
@@ -433,7 +503,7 @@ svg[class*="icon-"] {
     flex-direction: column;
     justify-content: center;
     max-width: 360px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+    box-shadow: var(--shadow-md);
     border-radius: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -461,7 +531,12 @@ svg[class*="icon-"] {
     fill: none;
 }
 
-.img-wrapper {
+.btn-icon-add:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.product-card__img-container {
     width: 100%;
     padding: 16px 16px 0 16px;
     border-radius: 16px 16px 0 0;
@@ -471,14 +546,14 @@ svg[class*="icon-"] {
     transition: transform 0.5s ease;
 }
 
-.card-img {
+.product-card__img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     transition: transform 0.5s ease;
 }
 
-.info-row {
+.product-card__info {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -486,7 +561,7 @@ svg[class*="icon-"] {
     width: 100%;
 }
 
-.info-heading {
+.product-card__title {
     font-size: 22px;
     text-align: left;
     width: 100%;
@@ -498,7 +573,7 @@ svg[class*="icon-"] {
     font-weight: 600;
 }
 
-.btn-quick-add {
+.product-card__action-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -506,15 +581,638 @@ svg[class*="icon-"] {
     width: 100%;
 }
 
-.btn-quick-add .icon-add {
+.product-card__action-bar .icon-add {
     width: 34px;
     height: 34px;
 }
 
+@media (hover:hover) {
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(255, 98, 0, 0.15);
+    }
+
+    .product-card:hover .product-card__img {
+        transform: scale(1.05);
+    }
+
+    .product-card:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 0 4px 10px rgba(255, 98, 0, 0.1);
+    }
+
+    .product-card:active .product-card__img {
+        transform: scale(1);
+    }
+}
+
+/* =============================== */
+/* --- WEAR CONNECTION SECTION --- */
+/* =============================== */
+
+.wear-connection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 60px 0;
+    background-color: var(--color-surface);
+}
+
+.wear-connection__heading {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 0 20px;
+    letter-spacing: -0.6px;
+}
+
+.wear-connection__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.wear-connection__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wear-connection__hint {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--color-gray-900);
+    padding: 8px 16px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.wear-connection__hint .icon-cart {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.wear-connection__hint p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.product-drawer {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 16px;
+    box-sizing: border-box;
+    transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 20;
+}
+
+.product-drawer__title {
+    color: var(--color-white);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 4px 0;
+    opacity: 0.8;
+}
+
+.product-drawer__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.product-drawer__link:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.product-drawer__thumb {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.product-drawer__name {
+    flex: 1;
+    color: var(--color-gray-100);
+    font-size: 12px;
+    line-height: 1.2;
+    transition: color 0.2s ease;
+}
+
+.product-drawer__price {
+    font-weight: bold;
+    color: var(--color-white);
+    font-size: 12px;
+}
+
+.wear-connection__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 0 20px;
+}
+
+.wear-connection__item--wide {
+    grid-column: span 2;
+}
+
+.wear-connection__item--upright {
+    height: 100%;
+}
+
+.wear-connection__item--small-2 {
+    grid-column: span 2;
+}
+
+@media (hover:hover) {
+    .wear-connection__item:hover .wear-connection__img {
+        transform: scale(1.05);
+    }
+
+    .wear-connection__item:hover .wear-connection__hint {
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+    }
+
+    .wear-connection__item:hover .product-drawer {
+        bottom: 0;
+    }
+
+    .product-drawer__link:hover .product-drawer__name {
+        color: var(--color-primary);
+    }
+}
+
+/* =============================== */
+/* --- WEAR CONNECTION SECTION --- */
+/* =============================== */
+
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 24px;
+    background-color: var(--color-white);
+}
+
+.how-it-works__heading {
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    max-width: 368px;
+    font-size: 32px;
+    font-weight: bold;
+    grid-area: header;
+}
+
+.how-it-works__timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "left-content"
+        "box-content"
+        "footer";
+    gap: 44px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.how-it-works__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    width: 100%;
+    min-height: 110px;
+    grid-area: left-content;
+}
+
+.how-it-works__step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 16px;
+    row-gap: 16px;
+    align-items: start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 360px;
+}
+
+.how-it-works__media-container {
+    max-width: 360px;
+    height: 260px;
+    position: relative;
+    border-radius: 16px;
+    grid-area: box-content;
+    position: relative;
+    width: 100%;
+    box-shadow: var(--shadow-lg);
+}
+
+.how-it-works__progress-track {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-gray-100);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.how-it-works__progress-fill {
+    height: 100%;
+    width: 0;
+}
+
+.first-text .how-it-works__progress-fill {
+    background-color: var(--color-primary);
+}
+
+.second-text .how-it-works__progress-fill {
+    background-color: var(--color-secondary);
+}
+
+.third-text .how-it-works__progress-fill {
+    background-color: var(--color-amber);
+}
+
+.how-it-works__media-box {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-box {
+    background-color: var(--color-primary);
+}
+
+.second-box {
+    background-color: var(--color-secondary);
+}
+
+.third-box {
+    background-color: var(--color-amber);
+}
+
+.how-it-works__timeline .btn--blue {
+    grid-area: footer;
+}
+
+.how-it-works__video {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    display: block;
+}
+
+.how-it-works__number {
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.how-it-works__number--orange {
+    color: var(--color-primary);
+}
+
+.how-it-works__number--blue {
+    color: var(--color-secondary);
+}
+
+.how-it-works__number--amber {
+    color: var(--color-amber);
+}
+
+.how-it-works__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 314px;
+}
+
+.how-it-works__desc {
+    font-size: 16px;
+}
+
+.how-it-works__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+@keyframes hiwCrossfade {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    2% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    35% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hiwProgress {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    33% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    34% {
+        width: 100%;
+        opacity: 0;
+    }
+
+    35% {
+        width: 0;
+        opacity: 0;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+.how-it-works__step,
+.how-it-works__media-box {
+    animation: hiwCrossfade 21s infinite both;
+}
+
+.how-it-works__progress-fill {
+    animation: hiwProgress 21s infinite both;
+}
+
+.first-text,
+.first-box {
+    animation-delay: 0s;
+}
+
+.second-text,
+.second-box {
+    animation-delay: 7s;
+}
+
+.third-text,
+.third-box {
+    animation-delay: 14s;
+}
+
+.first-text .how-it-works__progress-fill {
+    animation-delay: 0s;
+}
+
+.second-text .how-it-works__progress-fill {
+    animation-delay: 7s;
+}
+
+.third-text .how-it-works__progress-fill {
+    animation-delay: 14s;
+}
+
+/* ================================== */
+/* ---  HOELLA CLUB SECTION       --- */
+/* ================================== */
+
+.hoella-club {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+    padding: 60px 24px;
+    background-color: var(--color-surface);
+}
+
+.hoella-club__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.hoella-club__heading {
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hoella-club__content {
+    width: 100%;
+}
+
+.hoella-club__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+.hoella-club__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+}
+
+.hoella-club__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.hoella-club__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hoella-club__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    color: var(--color-white);
+    fill: currentColor;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hoella-club__socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    opacity: 60%;
+}
+
+@media (hover:hover) {
+    .hoella-club__card:hover .hoella-club__img {
+        transform: scale(1.08);
+    }
+
+    .hoella-club__card:hover .hoella-club__overlay {
+        opacity: 1;
+    }
+
+    .hoella-club__card:hover .hoella-club__icon {
+        opacity: 1;
+    }
+}
+
+/* ============================== */
+/* --- HOELLA JOURNAL SECTION --- */
+/* ============================== */
+
+.journal {
+    padding: 60px 24px;
+}
+
+.journal__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.journal__heading {
+    font-family: 'League Spartan', sans-serif;
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.journal__track {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+}
+
+.journal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: 280px;
+}
+
+.journal-card__img-wrapper {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+}
+
+.journal-card__img-wrapper .journal-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.journal-card__tag {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.journal-card__title {
+    font-size: 16px;
+    width: 100%;
+    min-width: 280px;
+}
+
+.journal-card__link {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--color-gray-600);
+}
+
+.journal-card__link .icon-arrow {
+    stroke-width: 0.4;
+    fill: var(--color-gray-600);
+    transform: translateY(4px);
+}
+
+@media (hover:hover) {
+    .journal-card:hover .journal-card__img-wrapper .journal-card__img {
+        transform: scale(1.06);
+    }
+}
+
+
 
 
 /* ============================== */
-/* --- TABLET ROOM --- */
+/* ---      TABLET ROOM       --- */
 /* ============================== */
 
 @media (min-width: 768px) {
@@ -522,7 +1220,7 @@ svg[class*="icon-"] {
         display: none;
     }
 
-    .hero-trust-badges .hero-pipe {
+    .hero__trust-pipe {
         display: flex;
         color: var(--color-gray);
     }
@@ -568,7 +1266,7 @@ svg[class*="icon-"] {
         display: block;
     }
 
-    .hero-section {
+    .hero {
         padding: 0 32px;
     }
 
@@ -576,12 +1274,12 @@ svg[class*="icon-"] {
         font-size: 36px;
     }
 
-    .hero-features ul {
+    .hero__features-list {
         gap: 8px 24px;
         font-size: 16px;
     }
 
-    .hero-features ul li {
+    .hero__feature-item {
         gap: 6px;
     }
 
@@ -598,8 +1296,6 @@ svg[class*="icon-"] {
         width: 290px;
     }
 
-
-
     .hero-images {
         display: flex;
         justify-content: center;
@@ -609,16 +1305,14 @@ svg[class*="icon-"] {
         margin: 30px auto 20px auto;
     }
 
-    .hero-trust-badges {
+
+    .hero__trust-list {
         max-width: 700px;
         margin-bottom: 55px;
-    }
-
-    .hero-trust-badges ul {
         gap: 10px 32px;
     }
 
-    .hero-trust-badges ul li {
+    .hero__trust-item {
         gap: 8px;
     }
 
@@ -626,7 +1320,7 @@ svg[class*="icon-"] {
     /* --- CATEGORIES SECTION --- */
     /* ============================== */
 
-    .categories-scroll-wrapper {
+    .categories__track {
         gap: 32px;
         padding: 20px 24px;
     }
@@ -636,26 +1330,215 @@ svg[class*="icon-"] {
         height: 180px;
     }
 
-    .categories-section .categories-heading {
+    .categories .categories-heading {
         font-size: 24px;
     }
 
     /* ============================== */
     /* ---   LATEST DROP SECTION  --- */
     /* ============================== */
-    .latest-drops {
-        align-items: center;
-    }
 
     .latest-drops-heading {
         font-size: 40px;
     }
 
-    .drops-wrapper {
+    .latest-drops__grid {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    /* =============================== */
+    /* --- WEAR CONNECTION SECTION --- */
+    /* =============================== */
+
+    .wear-connection {
+        padding: 80px 0;
+        gap: 32px;
+    }
+
+    .wear-connection__heading {
+        padding: 0 32px;
+        font-size: 44px;
+    }
+
+    .product-drawer__title {
+        font-size: 16px;
+    }
+
+    .product-drawer__link {
+        gap: 16px;
+    }
+
+    .product-drawer__thumb {
+        width: 48px;
+        height: 48px;
+    }
+
+    .product-drawer {
+        padding: 20px;
+        gap: 14px;
+    }
+
+    .product-drawer__name {
+        font-size: 16px;
+    }
+
+    .product-drawer__price {
+        font-size: 16px;
+    }
+
+    .wear-connection__grid {
+        gap: 28px;
+        padding: 0 32px;
+    }
+
+    .wear-connection__hint {
+        padding: 12px 20px;
+    }
+
+    .wear-connection__hint-text {
+        font-size: 16px;
+    }
+
+    .wear-connection__item--upright {
+        grid-row: span 2;
+    }
+
+    .wear-connection__item--small-2 {
+        grid-column: span 1;
+    }
+
+    /* =============================== */
+    /* --- HOW IT WORKS SECTION    --- */
+    /* =============================== */
+    .how-it-works {
+        padding: 80px 40px;
+    }
+
+    .how-it-works__heading {
+        font-size: 44px;
+        max-width: 768px;
+    }
+
+
+    .how-it-works__timeline {
+        grid-template-columns: 1fr 1fr;
+        max-width: 1150px;
+        grid-template-areas:
+            "header header"
+            "left-content box-content"
+            "footer footer";
+        gap: 60px;
+    }
+
+    .how-it-works__step {
+        position: static;
+        animation: none;
+        column-gap: 20px;
+        row-gap: 20px;
+    }
+
+    .how-it-works__media-container {
+        width: 100%;
+        max-width: 500px;
+        height: 80%;
+        align-self: center;
+
+    }
+
+    .how-it-works__video {
+        width: 100%;
+        height: 70%;
+    }
+
+
+    .how-it-works__number {
+        font-size: 60px;
+    }
+
+    .how-it-works__text-block {
+        gap: 20px;
+    }
+
+    .how-it-works__title {
+        font-size: 24px;
+    }
+
+    .how-it-works__desc {
+        font-size: 20px;
+    }
+
+    .how-it-works__timeline .btn--blue {
+        margin: 0;
+        justify-self: start;
+    }
+
+    /* ================================== */
+    /* ---  HOELLA CLUB SECTION       --- */
+    /* ================================== */
+
+    .hoella-club {
+        padding: 80px 40px;
+    }
+
+    .hoella-club__grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    }
+
+    .hoella-club__heading {
+        font-size: 40px;
+        max-width: 768px;
+    }
+
+    .hoella-club__container {
+        max-width: 1050px;
+        gap: 44px;
+    }
+
+    .hoella-club__container .btn {
+        font-size: 20px;
+        max-width: 250px;
+    }
+
+    /* ============================== */
+    /* --- HOELLA JOURNAL SECTION --- */
+    /* ============================== */
+
+    .journal {
+        padding: 80px 40px;
+    }
+
+    .journal__heading {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .journal__track {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: hidden;
+        gap: 24px;
+    }
+
+    .journal-card {
+        width: 100%;
+    }
+
+    .journal-card__tag {
+        font-size: 18px;
+    }
+
+    .journal-card__title {
+        font-size: 18px;
+    }
+
+    .journal-card__link {
+        font-size: 14px;
+    }
+
+    
 
 }
 
@@ -664,9 +1547,6 @@ svg[class*="icon-"] {
 /* ============================== */
 
 @media (min-width: 1150px) {
-    .icon-search {
-        display: none;
-    }
 
     .logo-small {
         display: none;
@@ -676,12 +1556,10 @@ svg[class*="icon-"] {
         display: none;
     }
 
-    .desktop-menu {
-        display: block;
-    }
-
     .logo-large {
         display: flex;
+        width: 120px;
+        padding-left: 20px;
     }
 
     .tablet-search-bar {
@@ -692,11 +1570,6 @@ svg[class*="icon-"] {
         max-width: 1400px;
         margin: 0 auto;
         padding: 16px 50px;
-    }
-
-    .logo-large {
-        width: 120px;
-        padding-left: 20px;
     }
 
     .desktop-menu {
@@ -766,7 +1639,7 @@ svg[class*="icon-"] {
         font-size: 40px;
     }
 
-    .hero-features ul {
+    .hero__features-list {
         font-size: 18px;
     }
 
@@ -791,30 +1664,27 @@ svg[class*="icon-"] {
         margin: 40px auto 20px auto;
     }
 
-    .hero-trust-badges {
-        max-width: 800px;
-        margin-bottom: 55px;
-    }
-
-    .hero-trust-badges ul {
+    .hero__trust-list {
         gap: 10px 40px;
         font-size: 16px;
+        max-width: 800px;
+        margin-bottom: 55px;
     }
 
     /* ============================== */
     /* --- CATEGORIES SECTION ---     */
     /* ============================== */
 
-    .categories-section {
+    .categories {
         align-items: center;
         padding: 80px 0;
     }
 
-    .categories-section .categories-heading {
+    .categories .categories-heading {
         font-size: 28px;
     }
 
-    .categories-scroll-wrapper {
+    .categories__track {
         gap: 40px;
         overflow-x: visible;
     }
@@ -835,12 +1705,12 @@ svg[class*="icon-"] {
         font-size: 54px;
     }
 
-    .drops-wrapper {
+    .latest-drops__grid {
         flex-wrap: nowrap;
         gap: 40px;
     }
 
-    .view-all-btn {
+    .latest-drops__btn {
         background-color: var(--color-white);
         color: var(--color-primary);
         width: fit-content;
@@ -851,28 +1721,167 @@ svg[class*="icon-"] {
 
     }
 
-    .view-all-btn:hover {
+    .latest-drops__btn:hover {
         background-color: var(--color-primary);
         color: var(--color-white);
     }
 
+    /* =============================== */
+    /* --- wearYourConnec. SECTION --- */
+    /* =============================== */
+
+    .wear-connection__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .wear-connection__item--upright {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .wear-connection__item--wide {
+        height: 420px;
+    }
+
+    .wear-connection__item--small-1,
+    .wear-connection__item--small-2 {
+        height: 320px;
+    }
+
+    .wear-connection {
+        padding: 100px 0;
+        gap: 40px;
+    }
+
+    .wear-connection__heading {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .product-drawer__title {
+        font-size: 18px;
+    }
+
+    .product-drawer__link {
+        gap: 18px;
+    }
+
+    .product-drawer__thumb {
+        width: 50px;
+        height: 50px;
+    }
+
+    .product-drawer {
+        padding: 20px 32px;
+    }
+
+    .product-drawer__name {
+        font-size: 18px;
+    }
+
+    .product-drawer__price {
+        font-size: 18px;
+    }
+
+    /* =============================== */
+    /* ---  howItWork SECTION      --- */
+    /* =============================== */
+
+    .how-it-works {
+        padding: 100px 24px;
+    }
+
+    .how-it-works__heading {
+        font-size: 52px;
+    }
+
+    .how-it-works__timeline {
+        width: 100%;
+        max-width: 1200px;
+        gap: 50px;
+    }
+
+    .how-it-works__step {
+        max-width: 450px;
+    }
+
+    .how-it-works__media-container {
+        width: 100%;
+        height: 500px;
+    }
+
+    .how-it-works__text-block {
+        gap: 18px;
+        max-width: 450px;
+    }
+
+    .how-it-works__title {
+        font-size: 26px;
+    }
+
+    .how-it-works__desc {
+        font-size: 22px;
+    }
+
+    /* ================================== */
+    /* ---  joinTheHoellaClub SECTION --- */
+    /* ================================== */
+    .hoella-club {
+        padding: 100px 60px;
+    }
+
+    .hoella-club__heading {
+        font-size: 52px;
+    }
+
+    .hoella-club__grid {
+        gap: 40px;
+    }
+
+    .hoella-club__container {
+        max-width: 1200px;
+        gap: 50px;
+    }
+
+    .hoella-club__container .btn {
+        max-width: 300px;
+    }
+
+    /* ============================== */
+    /* --- HOELLA JOURNAL SECTION --- */
+    /* ============================== */
+
+    .journal {
+        padding: 100px 60px;
+    }
+
+    .journal__heading {
+        font-size: 52px;
+    }
+
+    .journal__track {
+        max-width: 1200px;
+        align-self: center;
+    }
+
+    .journal-card__tag {
+        font-size: 20px;
+    }
+
+    .journal-card__title {
+        font-size: 20px;
+    }
+
+    .journal-card__link {
+        font-size: 16px;
+    }
+
 }
 
-@media (hover: hover) {
-
-    .category-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-    }
-
-    .category-card:hover .category-card-text {
-        color: var(--color-primary);
-    }
-
-    .category-card:active {
-        transform: scale(0.98);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    }
+@media (hover:hover) {
 
     .icon-search:hover,
     .icon-profile:hover,
@@ -880,43 +1889,5 @@ svg[class*="icon-"] {
     .desktop-search-icon:hover,
     .tablet-search-icon:hover {
         color: var(--color-primary);
-    }
-
-    .btn-primary:hover {
-        background-color: #e55800;
-        border-color: #e55800;
-        transform: translateY(-2px);
-    }
-
-    .btn-secondary:hover {
-        background-color: var(--color-primary);
-        color: var(--color-white);
-        transform: translateY(-2px);
-    }
-
-    .btn-primary:active,
-    .btn-secondary:active {
-        transform: translate(0) scale(0.96);
-        box-shadow: 0 2px 4px rgba(255, 98, 0, 0.2);
-    }
-
-
-    .product-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(255, 98, 0, 0.15);
-
-    }
-
-    .product-card:hover .card-img {
-        transform: scale(1.05);
-    }
-
-    .product-card:active {
-        transform: translateY(0) scale(0.98);
-        box-shadow: 0 4px 10px rgba(255, 98, 0, 0.1);
-    }
-
-    .product-card:active .card-img {
-        transform: scale(1);
     }
 }
