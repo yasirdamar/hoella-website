@@ -1208,8 +1208,119 @@ svg[class*="icon-"] {
     }
 }
 
+/* ============================== */
+/* ---   FOOTER SECTION       --- */
+/* ============================== */
 
+.footer {
+    background-color: var(--color-bg-dark);
+}
 
+.footer__container {
+    width: 100%;
+    padding: 40px 24px;
+}
+
+.footer__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+.footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer__logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.footer__desc {
+    color: var(--color-gray-500);
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 250px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 50px;
+    color: var(--color-gray-100);
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 24px;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer__title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-gray-100);
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    list-style: none;
+}
+
+.footer__link {
+    color: var(--color-gray-500);
+    font-size: 14px;
+}
+
+.footer__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-top: 1px solid var(--color-text-muted-dark);
+    padding: 24px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer__copyright {
+    color: var(--color-gray-400);
+}
+
+.footer__bottom-list {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.footer__bottom-link {
+    color: var(--color-gray-500);
+    font-size: 14px;
+}
+
+@media (hover:hover) {
+
+    .footer__link:hover {
+        color: var(--color-primary)
+    }
+
+    .footer__bottom-link:hover {
+        color: var(--color-primary)
+    }
+
+}
 
 /* ============================== */
 /* ---      TABLET ROOM       --- */
@@ -1452,7 +1563,6 @@ svg[class*="icon-"] {
         height: 70%;
     }
 
-
     .how-it-works__number {
         font-size: 60px;
     }
@@ -1538,7 +1648,42 @@ svg[class*="icon-"] {
         font-size: 14px;
     }
 
-    
+    /* ============================== */
+    /* ---   FOOTER SECTION       --- */
+    /* ============================== */
+
+    .footer__container {
+        padding: 60px 60px;
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    .footer__main {
+        flex-direction: row;
+    }
+
+    .footer__nav {
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer__column {
+        flex: 1;
+        min-width: 100px;
+    }
+
+    .footer__bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1150px;
+        padding: 40px 0;
+    }
+
+    .footer__bottom-list {
+        flex-direction: row;
+    } 
 
 }
 
@@ -1727,7 +1872,7 @@ svg[class*="icon-"] {
     }
 
     /* =============================== */
-    /* --- wearYourConnec. SECTION --- */
+    /* --- WEAR CONNECTION SECTION --- */
     /* =============================== */
 
     .wear-connection__grid {
@@ -1827,7 +1972,7 @@ svg[class*="icon-"] {
     }
 
     /* ================================== */
-    /* ---  joinTheHoellaClub SECTION --- */
+    /* ---  HOELLA CLUB SECTION       --- */
     /* ================================== */
     .hoella-club {
         padding: 100px 60px;
@@ -1877,6 +2022,30 @@ svg[class*="icon-"] {
 
     .journal-card__link {
         font-size: 16px;
+    }
+
+    /* ============================== */
+    /* ---   FOOTER SECTION       --- */
+    /* ============================== */
+
+    .footer__container {
+        max-width: 1200px;
+    }
+    .footer__desc {
+        max-width: 280px;
+        line-height: 1.7;
+        font-size: 16px;
+    }
+    .footer__title {
+        font-size: 26px;
+    }
+    .footer__link {
+        font-size: 16px;
+    }
+
+    .social-icon {
+        width: 22px;
+        height: 22px;
     }
 
 }
