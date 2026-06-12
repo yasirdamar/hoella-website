@@ -130,39 +130,35 @@
         </aside>
     </div>
     <main>
-        <section class="hero-section">
+        <section class="hero">
             <div class="hero-title">
                 <h1>WEAR YOUR <br> CONNECTION</h1>
             </div>
-
-            <div class="hero-features">
-                <ul>
-                    <li>
-                        <svg class="icon-check" aria-hidden="true">
-                            <use href="./public/images/icons/sprite.svg#icon-check"></use>
-                        </svg>
-                        Matching Sets
-                    </li>
-                    <li>
-                        <svg class="icon-check" aria-hidden="true">
-                            <use href="./public/images/icons/sprite.svg#icon-check"></use>
-                        </svg>
-                        Premium Quality
-                    </li>
-                    <li>
-                        <svg class="icon-check" aria-hidden="true">
-                            <use href="./public/images/icons/sprite.svg#icon-check"></use>
-                        </svg>
-                        Easy to Customize
-                    </li>
-                </ul>
-            </div>
-
+            <ul class="hero__features-list">
+                <li class="hero__feature-item">
+                    <svg class="icon-check" aria-hidden="true">
+                        <use href="./public/images/icons/sprite.svg#icon-check"></use>
+                    </svg>
+                    Matching Sets
+                </li>
+                <li class="hero__feature-item">
+                    <svg class="icon-check" aria-hidden="true">
+                        <use href="./public/images/icons/sprite.svg#icon-check"></use>
+                    </svg>
+                    Premium Quality
+                </li>
+                <li class="hero__feature-item">
+                    <svg class="icon-check" aria-hidden="true">
+                        <use href="./public/images/icons/sprite.svg#icon-check"></use>
+                    </svg>
+                    Easy to Customize
+                </li>
+            </ul>
             <div class="hero-buttons">
-                <a href="#" class="btn-primary btn-base">
+                <a href="#" class="btn--primary btn">
                     Shop Collection
                 </a>
-                <a href="#" class="btn-secondary btn-base">
+                <a href="#" class="btn--secondary btn">
                     Start Designing
                 </a>
             </div>
@@ -178,41 +174,35 @@
                         alt="The man wearing a custom orange bandana">
                 </div>
             </div>
-
-
-            <div class="hero-trust-badges">
-                <ul>
-                    <li>
-                        <svg class="icon-lock" aria-hidden="true">
-                            <use href="./public/images/icons/sprite.svg#icon-lock"></use>
-                        </svg>
-                        100% Secure Checkout
-                    </li>
-                    <li class="hero-pipe">|</li>
-                    <li>
-                        <svg class="icon-star" aria-hidden="true">
-                            <use href="./public/images/icons/sprite.svg#icon-star"></use>
-                        </svg>
-                        Satisfaction Guaranteed
-                    </li>
-                    <li class="hero-pipe">|</li>
-                    <li>
-                        <svg class="icon-usa-flag" aria-hidden="true">
-                            <use href="./public/images/icons/sprite.svg#icon-usa-flag"></use>
-                        </svg>
-                        Proudly Printed in Atlanta, GA
-                    </li>
-
-
-                </ul>
-            </div>
+            <ul class="hero__trust-list">
+                <li class="hero__trust-item">
+                    <svg class="icon-lock" aria-hidden="true">
+                        <use href="./public/images/icons/sprite.svg#icon-lock"></use>
+                    </svg>
+                    100% Secure Checkout
+                </li>
+                <li class="hero__trust-pipe">|</li>
+                <li class="hero__trust-item">
+                    <svg class="icon-star" aria-hidden="true">
+                        <use href="./public/images/icons/sprite.svg#icon-star"></use>
+                    </svg>
+                    Satisfaction Guaranteed
+                </li>
+                <li class="hero__trust-pipe">|</li>
+                <li class="hero__trust-item">
+                    <svg class="icon-usa-flag" aria-hidden="true">
+                        <use href="./public/images/icons/sprite.svg#icon-usa-flag"></use>
+                    </svg>
+                    Proudly Printed in Atlanta, GA
+                </li>
+            </ul>
         </section>
 
-        <section class="categories-section">
+        <section class="categories">
             <div class="categories-heading">
                 <h2>The Ultimate Connection <span>Starts Here</span></h2>
             </div>
-            <div class="categories-scroll-wrapper">
+            <div class="categories__track">
                 <a class="category-card" href="#">
                     <img class="category-card-img" src="./public/images/categories/T-shirt.svg"
                         alt="Customizable T-shirts">
@@ -249,18 +239,18 @@
 
         <section class="latest-drops">
             <h2 class="latest-drops-heading"><span>Shop</span> Our Latest Drops</h2>
-            <div class="drops-wrapper">
+            <div class="latest-drops__grid">
                 <a class="product-card" href="#">
-                    <div class="img-wrapper">
-                        <img class="card-img" src="./public/images/products/dog-mom.svg"
+                    <div class="product-card__img-container">
+                        <img class="product-card__img" src="./public/images/products/dog-mom.svg"
                             alt="Signature Dog Mom Hoodie - Hoella custom print sweatshirt">
                     </div>
 
-                    <div class="info-row">
+                    <div class="product-card__info">
                         <div class="text-block">
-                            <h3 class="info-heading">Signature Dog Mom Hoodie</h3>
+                            <h3 class="product-card__title">Signature Dog Mom Hoodie</h3>
                         </div>
-                        <div class="btn-quick-add">
+                        <div class="product-card__action-bar">
                             <p class="price">$49.00</p>
                             <button class="btn-icon-add">
                                 <svg class="icon-add" aria-hidden="true">
@@ -271,15 +261,15 @@
                     </div>
                 </a>
                 <a class="product-card" href="#">
-                    <div class="img-wrapper">
-                        <img class="card-img" src="./public/images/products/energetic-woman.svg"
+                    <div class="product-card__img-container">
+                        <img class="product-card__img" src="./public/images/products/energetic-woman.svg"
                             alt="Vibrant Connection Graphic Tee - Hoella custom print tshirt">
                     </div>
-                    <div class="info-row">
+                    <div class="product-card__info">
                         <div class="text-block">
-                            <h3 class="info-heading">Vibrant Connection Graphic Tee</h3>
+                            <h3 class="product-card__title">Vibrant Connection Graphic Tee</h3>
                         </div>
-                        <div class="btn-quick-add">
+                        <div class="product-card__action-bar">
                             <p class="price">$29.00</p>
                             <button class="btn-icon-add">
                                 <svg class="icon-add" aria-hidden="true">
@@ -290,15 +280,15 @@
                     </div>
                 </a>
                 <a class="product-card" href="#">
-                    <div class="img-wrapper">
-                        <img class="card-img" src="./public/images/products/pillow-cat.svg"
+                    <div class="product-card__img-container">
+                        <img class="product-card__img" src="./public/images/products/pillow-cat.svg"
                             alt="Peek-a-Boo Cat Accent Pillow - Hoella custom print pillow">
                     </div>
-                    <div class="info-row">
+                    <div class="product-card__info">
                         <div class="text-block">
-                            <h3 class="info-heading">Peek-a-Boo Cat Accent Pillow</h3>
+                            <h3 class="product-card__title">Peek-a-Boo Cat Accent Pillow</h3>
                         </div>
-                        <div class="btn-quick-add">
+                        <div class="product-card__action-bar">
                             <p class="price">$39.00</p>
                             <button class="btn-icon-add">
                                 <svg class="icon-add" aria-hidden="true">
@@ -309,103 +299,106 @@
                     </div>
                 </a>
             </div>
-            <a href="#" class="btn-base btn-primary view-all-btn">
+            <a href="#" class="btn btn--primary latest-drops__btn">
                 View All Drops
             </a>
         </section>
 
-        <section class="wear-connection-section">
-            <h2 class="wCsection-heading">Wear Your Connection</h2>
-            <div class="gallery-grid">
-                <div class="grid-item item-wide">
+        <section class="wear-connection">
+            <h2 class="wear-connection__heading">Wear Your Connection</h2>
+            <div class="wear-connection__grid">
+                <div class="wear-connection__item wear-connection__item--wide">
                     <img src="./public/images/grids/kid-grandpa-son-wide.png"
-                        alt="Grandfather and grandson wearing matching orange HOELLA hoodies" class="grid-img">
-                    <div class="hint-btn">
+                        alt="Grandfather and grandson wearing matching orange HOELLA hoodies"
+                        class="wear-connection__img">
+                    <div class="wear-connection__hint">
                         <svg class="icon-cart">
                             <use href="./public/images/icons/sprite.svg#icon-cart"></use>
                         </svg>
-                        <p class="hint-btn-text">Shop</p>
+                        <p class="wear-connection__hint-text">Shop</p>
                     </div>
                     <div class="product-drawer">
-                        <h4 class="drawer-title">Shop This Look</h4>
-                        <a href="#" class="drawer-link">
+                        <h4 class="product-drawer__title">Shop This Look</h4>
+                        <a href="#" class="product-drawer__link">
                             <img src="./public/images/grids/hoodie-white.png" alt="White custom cotton hoodie"
-                                class="drawer-thumb">
-                            <span class="product-name">Kids Heavy Cotton Hoodie</span>
-                            <span class="product-price">$19.90</span>
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Kids Heavy Cotton Hoodie</span>
+                            <span class="product-drawer__price">$19.90</span>
                         </a>
-                        <a href="#" class="drawer-link">
+                        <a href="#" class="product-drawer__link">
                             <img src="./public/images/grids/hoodie-green.png" alt="Green custom cotton hoodie"
-                                class="drawer-thumb">
-                            <span class="product-name">Adult Custom Cotton Hoodie</span>
-                            <span class="product-price">$29.90</span>
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Adult Custom Cotton Hoodie</span>
+                            <span class="product-drawer__price">$29.90</span>
                         </a>
                     </div>
                 </div>
-                <div class="grid-item item-upright">
+                <div class="wear-connection__item wear-connection__item--upright">
                     <img src="./public/images/grids/cat-upright.png"
-                        alt="A cat sitting next to a custom-printed cat food bowl" class="grid-img">
-                    <div class="hint-btn">
+                        alt="A cat sitting next to a custom-printed cat food bowl" class="wear-connection__img">
+                    <div class="wear-connection__hint">
                         <svg class="icon-cart">
                             <use href="./public/images/icons/sprite.svg#icon-cart"></use>
                         </svg>
-                        <p class="hint-btn-text">Shop</p>
+                        <p class="wear-connection__hint-text">Shop</p>
                     </div>
                     <div class="product-drawer">
-                        <h4 class="drawer-title">Shop This Look</h4>
-                        <a href="#" class="drawer-link">
+                        <h4 class="product-drawer__title">Shop This Look</h4>
+                        <a href="#" class="product-drawer__link">
                             <img src="./public/images/grids/cat-bowl.svg" alt="Ceramic cat bowl with custom print"
-                                class="drawer-thumb">
-                            <span class="product-name">Cat Bowl ceramic</span>
-                            <span class="product-price">$23.80</span>
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Cat Bowl ceramic</span>
+                            <span class="product-drawer__price">$23.80</span>
                         </a>
-                        <a href="#" class="drawer-link">
+                        <a href="#" class="product-drawer__link">
                             <img src="./public/images/grids/cat collar.svg" alt="Brown leather cat collar with a tag"
-                                class="drawer-thumb">
-                            <span class="product-name">Leather Cat Collar</span>
-                            <span class="product-price">$19.46</span>
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Leather Cat Collar</span>
+                            <span class="product-drawer__price">$19.46</span>
                         </a>
                     </div>
                 </div>
-                <div class="grid-item item-small-1">
-                    <img src="./public/images/grids/jelewery-dog-small-1.jpg"
-                        alt="Gold necklace with a dog charm - HOELLA Jewelry" class="grid-img">
-                    <div class="hint-btn">
+                <div class="wear-connection__item wear-connection__item--small-1">
+                    <img src="./public/images/grids/jewelry-dog-small-1.jpg"
+                        alt="Gold necklace with a dog charm - HOELLA Jewelry" class="wear-connection__img">
+                    <div class="wear-connection__hint">
                         <svg class="icon-cart">
                             <use href="./public/images/icons/sprite.svg#icon-cart"></use>
                         </svg>
-                        <p class="hint-btn-text">Shop</p>
+                        <p class="wear-connection__hint-text">Shop</p>
                     </div>
                     <div class="product-drawer">
-                        <h4 class="drawer-title">Shop This Look</h4>
-                        <a href="#" class="drawer-link">
-                            <img src="./public/images/grids/jelewery-dog-small-1.jpg" alt="" class="drawer-thumb">
-                            <span class="product-name">Jewelry Dog Mom</span>
-                            <span class="product-price">$19.80</span>
+                        <h4 class="product-drawer__title">Shop This Look</h4>
+                        <a href="#" class="product-drawer__link">
+                            <img src="./public/images/grids/jewelry-dog-small-1.jpg" alt="Gold necklace with a dog charm"
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Jewelry Dog Mom</span>
+                            <span class="product-drawer__price">$19.80</span>
                         </a>
-                        <a href="#" class="drawer-link">
-                            <img src="./public/images/grids/jelewery-dog-small-1.jpg" alt="" class="drawer-thumb">
-                            <span class="product-name">Jewelry dog Collar</span>
-                            <span class="product-price">$20.46</span>
+                        <a href="#" class="product-drawer__link">
+                            <img src="./public/images/grids/jewelry-dog-small-1.jpg" alt="Dog-themed charm collar"
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Jewelry dog Collar</span>
+                            <span class="product-drawer__price">$20.46</span>
                         </a>
                     </div>
                 </div>
-                <div class="grid-item item-small-2">
+                <div class="wear-connection__item wear-connection__item--small-2">
                     <img src="./public/images/grids/pillow-woman-small-2.png"
-                        alt="A woman holding a decorative pillow with the Hoella logo" class="grid-img">
-                    <div class="hint-btn">
+                        alt="A woman holding a decorative pillow with the Hoella logo" class="wear-connection__img">
+                    <div class="wear-connection__hint">
                         <svg class="icon-cart">
                             <use href="./public/images/icons/sprite.svg#icon-cart"></use>
                         </svg>
-                        <p class="hint-btn-text">Shop</p>
+                        <p class="wear-connection__hint-text">Shop</p>
                     </div>
                     <div class="product-drawer">
-                        <h4 class="drawer-title">Shop This Look</h4>
-                        <a href="#" class="drawer-link">
+                        <h4 class="product-drawer__title">Shop This Look</h4>
+                        <a href="#" class="product-drawer__link">
                             <img src="./public/images/grids/pillow.png" alt="Decorative cotton pillow with hoella logo"
-                                class="drawer-thumb">
-                            <span class="product-name">Cotton Pillow</span>
-                            <span class="product-price">$29.80</span>
+                                class="product-drawer__thumb">
+                            <span class="product-drawer__name">Cotton Pillow</span>
+                            <span class="product-drawer__price">$29.80</span>
                         </a>
                     </div>
                 </div>
@@ -414,112 +407,119 @@
 
         </section>
 
-        <section class="how-it-works-section">
-            <div class="hiw-timeline">
-                <h2 class="hiw-heading">How to Wear Connection</h2>
-                <div class="hiw-left-content">
-                    <div class="hiw-item-text first-text">
-                        <span class="hiw-number hiw-number--orange">1</span>
-                        <div class="hiw-text-block">
-                            <h3 class="hiw-title">Pick Your Product</h3>
-                            <p class="hiw-desc">Select from our curated collection of ultra-soft apparel for both you
+        <section class="how-it-works">
+            <div class="how-it-works__timeline">
+                <h2 class="how-it-works__heading">How to Wear Connection</h2>
+                <div class="how-it-works__content">
+                    <div class="how-it-works__step first-text">
+                        <span class="how-it-works__number how-it-works__number--orange">1</span>
+                        <div class="how-it-works__text-block">
+                            <h3 class="how-it-works__title">Pick Your Product</h3>
+                            <p class="how-it-works__desc">Select from our curated collection of ultra-soft apparel for
+                                both you
                                 and your furry best friend.</p>
                         </div>
-                        <div class="hiw-progress-track">
-                            <div class="hiw-progress-fill"></div>
+                        <div class="how-it-works__progress-track">
+                            <div class="how-it-works__progress-fill"></div>
                         </div>
                     </div>
 
-                    <div class="hiw-item-text second-text">
-                        <span class="hiw-number hiw-number--blue">2</span>
-                        <div class="hiw-text-block">
-                            <h3 class="hiw-title">Customize Your Bond</h3>
-                            <p class="hiw-desc">Upload your favorite photo, add a name, or apply a matching graphic.
+                    <div class="how-it-works__step second-text">
+                        <span class="how-it-works__number how-it-works__number--blue">2</span>
+                        <div class="how-it-works__text-block">
+                            <h3 class="how-it-works__title">Customize Your Bond</h3>
+                            <p class="how-it-works__desc">Upload your favorite photo, add a name, or apply a matching
+                                graphic.
                                 Make it uniquely yours.</p>
                         </div>
-                        <div class="hiw-progress-track">
-                            <div class="hiw-progress-fill"></div>
+                        <div class="how-it-works__progress-track">
+                            <div class="how-it-works__progress-fill"></div>
                         </div>
                     </div>
-                    <div class="hiw-item-text third-text">
-                        <span class="hiw-number hiw-number--amber">3</span>
-                        <div class="hiw-text-block">
-                            <h3 class="hiw-title">We Print & Ship</h3>
-                            <p class="hiw-desc">Proudly custom-printed in our Atlanta, GA facility and delivered fast
+                    <div class="how-it-works__step third-text">
+                        <span class="how-it-works__number how-it-works__number--amber">3</span>
+                        <div class="how-it-works__text-block">
+                            <h3 class="how-it-works__title">We Print & Ship</h3>
+                            <p class="how-it-works__desc">Proudly custom-printed in our Atlanta, GA facility and
+                                delivered fast
                                 right to your doorstep.</p>
                         </div>
-                        <div class="hiw-progress-track">
-                            <div class="hiw-progress-fill"></div>
+                        <div class="how-it-works__progress-track">
+                            <div class="how-it-works__progress-fill"></div>
                         </div>
                     </div>
                 </div>
-                <div class="hiw-box-content">
-                    <div class="hiw-box first-box">
-                        <video class="hiw-video" autoplay muted loop playsinline preload="metadata"
-                        poster="./public/images/hiw/man-dog-poster.jpg">
+                <div class="how-it-works__media-container">
+                    <div class="how-it-works__media-box first-box">
+                        <video class="how-it-works__video" autoplay muted loop playsinline preload="metadata"
+                            poster="./public/images/hiw/man-dog-poster.jpg">
                             <source src="./public/videos/man-dog.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="hiw-box second-box">
-                        <video class="hiw-video" autoplay muted loop playsinline preload="metadata"
-                        poster="./public/images/hiw/woman-cat-poster.jpg">
+                    <div class="how-it-works__media-box second-box">
+                        <video class="how-it-works__video" autoplay muted loop playsinline preload="metadata"
+                            poster="./public/images/hiw/woman-cat-poster.jpg">
                             <source src="./public/videos/woman-cat.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="hiw-box third-box">
-                        <video class="hiw-video" autoplay muted loop playsinline preload="metadata"
-                        poster="./public/images/hiw/Fulfillment-box-poster.jpg">
+                    <div class="how-it-works__media-box third-box">
+                        <video class="how-it-works__video" autoplay muted loop playsinline preload="metadata"
+                            poster="./public/images/hiw/Fulfillment-box-poster.jpg">
                             <source src="./public/videos/Fulfillment-box.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
-                <a href="#" class="btn-base btn-blue">
+                <a href="#" class="btn btn--blue">
                     Start Designing
                 </a>
             </div>
         </section>
 
-        <section class="join-the-hoella-club-section">
-            <div class="jthc-social-gallery">
-                <h2 class="jthc-heading">Join The Hoella Club</h2>
-                <div class="jthc-middle-content">
-                    <div class="jthc-gallery">
-                        <a href="#" class="jthc-card">
-                            <img class="jthc-img" src="./public/images/social/woman-dog-instagram.jpg" alt="woman hugging her dog">
-                            <div class="jthc-overlay"></div>
-                            <svg class="jthc-icon" aria-hidden="true">
+        <section class="hoella-club">
+            <div class="hoella-club__container">
+                <h2 class="hoella-club__heading">Join The Hoella Club</h2>
+                <div class="hoella-club__content">
+                    <div class="hoella-club__grid">
+                        <a href="#" class="hoella-club__card">
+                            <img class="hoella-club__img" src="./public/images/social/woman-dog-instagram.jpg"
+                                alt="woman hugging her dog">
+                            <div class="hoella-club__overlay"></div>
+                            <svg class="hoella-club__icon" aria-hidden="true">
                                 <use href="./public/images/icons/sprite.svg#icon-instagram"></use>
                             </svg>
                         </a>
-                        <a href="#" class="jthc-card">
-                            <img class="jthc-img" src="./public/images/social/woman-hat-tshirt-tiktok.jpg" alt="Woman in a hat and graphic t-shirt">
-                            <div class="jthc-overlay"></div>
-                            <svg class="jthc-icon" aria-hidden="true">
+                        <a href="#" class="hoella-club__card">
+                            <img class="hoella-club__img" src="./public/images/social/woman-hat-tshirt-tiktok.jpg"
+                                alt="Woman in a hat and graphic t-shirt">
+                            <div class="hoella-club__overlay"></div>
+                            <svg class="hoella-club__icon" aria-hidden="true">
                                 <use href="./public/images/icons/sprite.svg#icon-tiktok"></use>
                             </svg>
                         </a>
-                        <a href="#" class="jthc-card">
-                            <img class="jthc-img" src="./public/images/social/kid-cat-youtube.jpg" alt="Young boy hugging a white cat">
-                            <div class="jthc-overlay"></div>
-                            <svg class="jthc-icon" aria-hidden="true">
+                        <a href="#" class="hoella-club__card">
+                            <img class="hoella-club__img" src="./public/images/social/kid-cat-youtube.jpg"
+                                alt="Young boy hugging a white cat">
+                            <div class="hoella-club__overlay"></div>
+                            <svg class="hoella-club__icon" aria-hidden="true">
                                 <use href="./public/images/icons/sprite.svg#icon-youtube"></use>
                             </svg>
                         </a>
-                        <a href="#" class="jthc-card">
-                            <img class="jthc-img" src="./public/images/social/elephant-pinterest.jpg" alt="tshirt with an elephant print">
-                            <div class="jthc-overlay"></div>
-                            <svg class="jthc-icon" aria-hidden="true">
+                        <a href="#" class="hoella-club__card">
+                            <img class="hoella-club__img" src="./public/images/social/elephant-pinterest.jpg"
+                                alt="tshirt with an elephant print">
+                            <div class="hoella-club__overlay"></div>
+                            <svg class="hoella-club__icon" aria-hidden="true">
                                 <use href="./public/images/icons/sprite.svg#icon-pinterest"></use>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <a href="#" class="btn-base btn-secondary">Follow our Journey</a>
+                <a href="#" class="btn btn--secondary">Follow our Journey</a>
             </div>
-            <div class="jthc-social-icons">
+            <div class="hoella-club__socials">
                 <a href="#" aria-label="Visit our Instagram page">
                     <svg class="social-icon" aria-hidden="true">
                         <use href="./public/images/icons/sprite.svg#icon-instagram"></use>
@@ -542,7 +542,62 @@
                 </a>
             </div>
         </section>
+
+        <section class="journal">
+            <div class="journal__container">
+                <h2 class="journal__heading">Hoella Journal</h2>
+                <div class="journal__track">
+                    <article class="journal-card">
+                        <a href="#" class="journal-card__img-wrapper">
+                            <img class="journal-card__img" src="./public/images/journal/cat-dog.jpg"
+                                alt="Brown dog and tabby cat cuddling together on a cozy blanket">
+                        </a>
+                        <p class="journal-card__tag">PET LIFESTYLE</p>
+                        <h3 class="journal-card__title">The Ultimate Guide to Matching Outfits</h3>
+                        <a href="#" class="journal-card__link"
+                            aria-label="Read Article: The Ultimate Guide to Matching Outfits">Read Article
+                            <svg class="icon-arrow" aria-hidden="true">
+                                <use href="./public/images/icons/sprite.svg#arrow-mini-icon"></use>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="journal-card">
+                        <a href="#" class="journal-card__img-wrapper">
+                            <img class="journal-card__img" src="./public/images/journal/couple-fashion.jpg"
+                                alt="Young couple wearing matching custom graphic t-shirt and hoodie">
+                        </a>
+                        <p class="journal-card__tag">FASHION</p>
+                        <h3 class="journal-card__title">The Anatomy of Premium Comfort: Styling Tees & Hoodies</h3>
+                        <a href="#" class="journal-card__link"
+                            aria-label="Read Article: The Anatomy of Premium Comfort: Styling Tees & Hoodies">Read
+                            Article
+                            <svg class="icon-arrow" aria-hidden="true">
+                                <use href="./public/images/icons/sprite.svg#arrow-mini-icon"></use>
+                            </svg>
+                        </a>
+                    </article>
+                    <article class="journal-card">
+                        <a href="#" class="journal-card__img-wrapper">
+                            <img class="journal-card__img" src="./public/images/journal/womans-pet-kiss.jpg"
+                                alt="Woman in a pink headband kissing her Golden Retriever outdoors">
+                        </a>
+                        <p class="journal-card__tag">PET LIFESTYLE</p>
+                        <h3 class="journal-card__title">CONNECTED IN COMFORT: Matching Looks for Every Park Adventure
+                        </h3>
+                        <a href="#" class="journal-card__link"
+                            aria-label="Read Article: CONNECTED IN COMFORT: Matching Looks for Every Park Adventure">Read
+                            Article
+                            <svg class="icon-arrow" aria-hidden="true">
+                                <use href="./public/images/icons/sprite.svg#arrow-mini-icon"></use>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
+
+
 </body>
 
 </html>
