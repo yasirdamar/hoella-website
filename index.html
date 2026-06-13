@@ -726,6 +726,20 @@
             event.preventDefault();
             mobileMenu.classList.remove('menu-overlay--active');
         });
+
+        if (window.matchMedia('(hover: none)').matches) {
+            document.querySelectorAll('.wear-connection__item').forEach(function (item) {
+                item.addEventListener('click', function (e) {
+                    if (e.target.closest('.product-drawer')) return; 
+                    const isOpen = item.classList.contains('is-open');
+                    document.querySelectorAll('.wear-connection__item.is-open').forEach(function (el) {
+                        el.classList.remove('is-open');
+                    });
+                    if (!isOpen) item.classList.add('is-open');
+                });
+            });
+        }
+
     </script>
 </body>
 

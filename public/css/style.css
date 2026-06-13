@@ -406,7 +406,6 @@ svg[class*="icon-"] {
     display: none;
 }
 
-/* KUTU RENKLERİ (32s Toplam: Her Renk 8s kalır -> 2 Fotoğraf) */
 @keyframes colorMobile {
 
     0%,
@@ -414,25 +413,21 @@ svg[class*="icon-"] {
         background-color: var(--color-primary);
     }
 
-    /* 1. ve 2. Foto -> Turuncu */
     25%,
     49.99% {
         background-color: var(--color-secondary);
     }
 
-    /* 3. ve 4. Foto -> Mavi */
     50%,
     74.99% {
         background-color: var(--color-amber);
     }
 
-    /* 5. ve 6. Foto -> Kehribar */
     75%,
     99.99% {
         background-color: var(--color-purple);
     }
 
-    /* 7. ve 8. Foto -> Mor */
     100% {
         background-color: var(--color-primary);
     }
@@ -442,7 +437,7 @@ svg[class*="icon-"] {
     animation: colorMobile 32s infinite;
 }
 
-/* 8 FOTOĞRAFIN GECİKMESİZ, ABSOLÜT SIRALAMASI (Her biri %12.5 yani 4 saniye) */
+
 @keyframes m1 {
 
     0%,
@@ -456,7 +451,7 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 1, Foto 1 */
+
 @keyframes m2 {
 
     0%,
@@ -475,7 +470,7 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 2, Foto 1 */
+
 @keyframes m3 {
 
     0%,
@@ -494,7 +489,6 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 1, Foto 2 */
 @keyframes m4 {
 
     0%,
@@ -513,7 +507,6 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 2, Foto 2 */
 @keyframes m5 {
 
     0%,
@@ -532,7 +525,6 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 1, Foto 3 */
 @keyframes m6 {
 
     0%,
@@ -551,7 +543,6 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 2, Foto 3 */
 @keyframes m7 {
 
     0%,
@@ -570,7 +561,6 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 1, Foto 4 */
 @keyframes m8 {
 
     0%,
@@ -588,7 +578,6 @@ svg[class*="icon-"] {
     }
 }
 
-/* Kutu 2, Foto 4 */
 
 .img-primary .hero__card-img:nth-of-type(1) {
     animation: m1 32s infinite;
@@ -1045,8 +1034,22 @@ svg[class*="icon-"] {
     }
 }
 
+.wear-connection__item.is-open .wear-connection__img {
+    transform: scale(1.05);
+}
+ 
+.wear-connection__item.is-open .wear-connection__hint {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+ 
+.wear-connection__item.is-open .product-drawer {
+    bottom: 0;
+}
+
 /* =============================== */
-/* --- WEAR CONNECTION SECTION --- */
+/* --- HOW IT WORKS SECTION    --- */
 /* =============================== */
 
 .how-it-works {
