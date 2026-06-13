@@ -23,8 +23,8 @@
     <header class="header-container">
         <nav class="main-nav">
 
-            <div class="nav-left">
-                <a href="#" aria-label="Open main menu">
+            <div class="main-nav__left">
+                <a href="#" aria-label="Open main menu" id="hamburger-btn">
                     <svg class="icon-hamburger" aria-hidden="true">
                         <use href="./public/images/icons/sprite.svg#icon-hamburger"></use>
                     </svg>
@@ -36,13 +36,13 @@
                 </a>
             </div>
 
-            <div class="desktop-menu">
+            <div class="main-nav__desktop-menu">
                 <a href="#">Design your own</a>
                 <a href="#">Shop</a>
                 <a href="#">Gifts</a>
             </div>
 
-            <div class="tablet-search-bar">
+            <div class="main-nav__tablet-search-bar">
                 <a href="#" aria-label="Submit search">
                     <svg class="tablet-search-icon" aria-hidden="true">
                         <use href="./public/images/icons/sprite.svg#icon-search"></use>
@@ -52,7 +52,7 @@
                     aria-label="Search for custom items">
             </div>
 
-            <div class="nav-right">
+            <div class="main-nav__right">
                 <div class="desktop-search-bar">
                     <a href="#" aria-label="Submit search">
                         <svg class="desktop-search-icon">
@@ -81,30 +81,30 @@
         </nav>
     </header>
 
-    <div class="menu-overlay">
+    <div class="menu-overlay" id="mobile-menu">
         <aside class="sidebar">
-            <header class="sidebar-header">
-                <a href="#" aria-label="Close sidebar menu">
-                    <svg class="sidebar-close" aria-hidden="true">
+            <header class="sidebar__header">
+                <a href="#" aria-label="Close sidebar menu" id="close-btn">
+                    <svg class="sidebar__close" aria-hidden="true">
                         <use href="./public/images/icons/sprite.svg#icon-close"></use>
                     </svg>
                 </a>
                 <a href="#" aria-label="View shopping cart">
-                    <svg class="sidebar-cart" aria-hidden="true">
+                    <svg class="sidebar__cart" aria-hidden="true">
                         <use href="./public/images/icons/sprite.svg#icon-cart"></use>
                     </svg>
                 </a>
             </header>
-            <nav class="sidebar-nav">
+            <nav class="sidebar__nav">
                 <a href="#">Design your own</a>
                 <a href="#">Shop</a>
                 <a href="#">Gifts</a>
 
-                <a class="sidebar-btn" href="#">
+                <a class="sidebar__btn" href="#">
                     start designing
                 </a>
             </nav>
-            <footer class="sidebar-footer">
+            <footer class="sidebar__footer">
                 <a href="#" aria-label="Visit our Instagram page">
                     <svg class="social-icon" aria-hidden="true">
                         <use href="./public/images/icons/sprite.svg#icon-instagram"></use>
@@ -131,7 +131,7 @@
     </div>
     <main>
         <section class="hero">
-            <div class="hero-title">
+            <div class="hero__title">
                 <h1>WEAR YOUR <br> CONNECTION</h1>
             </div>
             <ul class="hero__features-list">
@@ -154,7 +154,7 @@
                     Easy to Customize
                 </li>
             </ul>
-            <div class="hero-buttons">
+            <div class="hero__buttons">
                 <a href="#" class="btn--primary btn">
                     Shop Collection
                 </a>
@@ -162,16 +162,28 @@
                     Start Designing
                 </a>
             </div>
-            <div class="hero-images">
+            <div class="hero__images">
                 <div class="img-primary">
-                    <div class="hero-backdrop"></div>
-                    <img class="hero-card-img" src="./public/images/bandana-dog-logo.svg"
-                        alt="Golden retriever wearing a custom orange bandana">
+                    <div class="hero__backdrop"></div>
+                    <img class="hero__card-img" src="./public/images/hero-section/cat-collar-tshirt.png"
+                        alt="Scottish Fold cat wearing a navy blue hoella t-shirt with orange logo and a matching collar tag">
+                    <img class="hero__card-img" src="./public/images/hero-section/man-hoodie-hearth.png"
+                        alt="Young man in a dark grey hoodie featuring a neon orange heartbeat line with the text my heart">
+                    <img class="hero__card-img" src="./public/images/hero-section/dog-green-sweatshirt.png"
+                        alt="Dalmatian dog wearing a green hoella sweatshirt with orange logo and a brown leather collar">
+                    <img class="hero__card-img" src="./public/images/hero-section/dad-tshirt.png"
+                        alt="Smiling man in a navy blue t-shirt with a line-art father and daughter design and the text My daughter is my why, paired with a grey hoella trucker cap">
                 </div>
                 <div class="img-secondary">
-                    <div class="hero-backdrop"></div>
-                    <img class="hero-card-img" src="./public/images/01-human-logo.svg"
-                        alt="The man wearing a custom orange bandana">
+                    <div class="hero__backdrop"></div>
+                    <img class="hero__card-img" src="./public/images/hero-section/woman-bandana-hoodie.png"
+                        alt="Smiling woman sitting cross-legged in a navy blue hoella hoodie with a small orange chest logo and a matching navy hoella beanie">
+                    <img class="hero__card-img" src="./public/images/hero-section/woman-hoodie-hearth.png"
+                        alt="Woman wearing a cream beige hoodie with a blue neon heartbeat design and the text beat for you">
+                    <img class="hero__card-img" src="./public/images/hero-section/woman-sweatshirt-dogs-photo.png"
+                        alt="Smiling woman in a forest green sweatshirt with a watercolor Dalmatian portrait print and the text beat for you, wearing a hoella wristband">
+                    <img class="hero__card-img" src="./public/images/hero-section/daughter-sweatshirt.png"
+                        alt="Young girl wearing an orange crewneck sweatshirt with a father and daughter line-art print and the text My Dad Is My Hero">
                 </div>
             </div>
             <ul class="hero__trust-list">
@@ -199,46 +211,46 @@
         </section>
 
         <section class="categories">
-            <div class="categories-heading">
+            <div class="categories__heading">
                 <h2>The Ultimate Connection <span>Starts Here</span></h2>
             </div>
             <div class="categories__track">
                 <a class="category-card" href="#">
-                    <img class="category-card-img" src="./public/images/categories/T-shirt.svg"
+                    <img class="category-card__img" src="./public/images/categories/tshirt.svg"
                         alt="Customizable T-shirts">
-                    <span class="category-card-text">T-shirt</span>
+                    <span class="category-card__text">T-shirt</span>
                 </a>
                 <a class="category-card" href="#">
-                    <img class="category-card-img" src="./public/images/categories/Sweatshirt.svg"
+                    <img class="category-card__img" src="./public/images/categories/sweatshirt.svg"
                         alt="Customizable Sweatshirts">
-                    <span class="category-card-text">Sweatshirt</span>
+                    <span class="category-card__text">Sweatshirt</span>
                 </a>
                 <a class="category-card" href="#">
-                    <img class="category-card-img" src="./public/images/categories/Hoodie.svg"
+                    <img class="category-card__img" src="./public/images/categories/hoodie.svg"
                         alt="Customizable Hoodies">
-                    <span class="category-card-text">Hoodie</span>
+                    <span class="category-card__text">Hoodie</span>
                 </a>
                 <a class="category-card" href="#">
-                    <img class="category-card-img" src="./public/images/categories/Accessories.svg"
+                    <img class="category-card__img" src="./public/images/categories/accessories.svg"
                         alt="Customizable Accessories">
-                    <span class="category-card-text">Accessories</span>
+                    <span class="category-card__text">Accessories</span>
                 </a>
                 <a class="category-card" href="#">
-                    <img class="category-card-img" src="./public/images/categories/Pet-Essentials.svg"
+                    <img class="category-card__img" src="./public/images/categories/pet-essentials.svg"
                         alt="Customizable Pet Apparel and Essentials">
-                    <span class="category-card-text">Pet Essentials</span>
+                    <span class="category-card__text">Pet Essentials</span>
                 </a>
                 <a class="category-card" href="#">
-                    <img class="category-card-img" src="./public/images/categories/Home-Living.svg"
+                    <img class="category-card__img" src="./public/images/categories/home-living.svg"
                         alt="Customizable Home and Living Textiles">
-                    <span class="category-card-text">Home & Living</span>
+                    <span class="category-card__text">Home & Living</span>
                 </a>
             </div>
 
         </section>
 
         <section class="latest-drops">
-            <h2 class="latest-drops-heading"><span>Shop</span> Our Latest Drops</h2>
+            <h2 class="latest-drops__heading"><span>Shop</span> Our Latest Drops</h2>
             <div class="latest-drops__grid">
                 <a class="product-card" href="#">
                     <div class="product-card__img-container">
@@ -247,7 +259,7 @@
                     </div>
 
                     <div class="product-card__info">
-                        <div class="text-block">
+                        <div class="product-card__text-block">
                             <h3 class="product-card__title">Signature Dog Mom Hoodie</h3>
                         </div>
                         <div class="product-card__action-bar">
@@ -266,7 +278,7 @@
                             alt="Vibrant Connection Graphic Tee - Hoella custom print tshirt">
                     </div>
                     <div class="product-card__info">
-                        <div class="text-block">
+                        <div class="product-card__text-block">
                             <h3 class="product-card__title">Vibrant Connection Graphic Tee</h3>
                         </div>
                         <div class="product-card__action-bar">
@@ -285,7 +297,7 @@
                             alt="Peek-a-Boo Cat Accent Pillow - Hoella custom print pillow">
                     </div>
                     <div class="product-card__info">
-                        <div class="text-block">
+                        <div class="product-card__text-block">
                             <h3 class="product-card__title">Peek-a-Boo Cat Accent Pillow</h3>
                         </div>
                         <div class="product-card__action-bar">
@@ -351,7 +363,7 @@
                             <span class="product-drawer__price">$23.80</span>
                         </a>
                         <a href="#" class="product-drawer__link">
-                            <img src="./public/images/grids/cat collar.svg" alt="Brown leather cat collar with a tag"
+                            <img src="./public/images/grids/cat-collar.svg" alt="Brown leather cat collar with a tag"
                                 class="product-drawer__thumb">
                             <span class="product-drawer__name">Leather Cat Collar</span>
                             <span class="product-drawer__price">$19.46</span>
@@ -370,8 +382,8 @@
                     <div class="product-drawer">
                         <h4 class="product-drawer__title">Shop This Look</h4>
                         <a href="#" class="product-drawer__link">
-                            <img src="./public/images/grids/jewelry-dog-small-1.jpg" alt="Gold necklace with a dog charm"
-                                class="product-drawer__thumb">
+                            <img src="./public/images/grids/jewelry-dog-small-1.jpg"
+                                alt="Gold necklace with a dog charm" class="product-drawer__thumb">
                             <span class="product-drawer__name">Jewelry Dog Mom</span>
                             <span class="product-drawer__price">$19.80</span>
                         </a>
@@ -411,7 +423,7 @@
             <div class="how-it-works__timeline">
                 <h2 class="how-it-works__heading">How to Wear Connection</h2>
                 <div class="how-it-works__content">
-                    <div class="how-it-works__step first-text">
+                    <div class="how-it-works__step how-it-works__first-text">
                         <span class="how-it-works__number how-it-works__number--orange">1</span>
                         <div class="how-it-works__text-block">
                             <h3 class="how-it-works__title">Pick Your Product</h3>
@@ -424,7 +436,7 @@
                         </div>
                     </div>
 
-                    <div class="how-it-works__step second-text">
+                    <div class="how-it-works__step how-it-works__second-text">
                         <span class="how-it-works__number how-it-works__number--blue">2</span>
                         <div class="how-it-works__text-block">
                             <h3 class="how-it-works__title">Customize Your Bond</h3>
@@ -436,7 +448,7 @@
                             <div class="how-it-works__progress-fill"></div>
                         </div>
                     </div>
-                    <div class="how-it-works__step third-text">
+                    <div class="how-it-works__step how-it-works__third-text">
                         <span class="how-it-works__number how-it-works__number--amber">3</span>
                         <div class="how-it-works__text-block">
                             <h3 class="how-it-works__title">We Print & Ship</h3>
@@ -450,24 +462,24 @@
                     </div>
                 </div>
                 <div class="how-it-works__media-container">
-                    <div class="how-it-works__media-box first-box">
+                    <div class="how-it-works__media-box how-it-works__media-box--1">
                         <video class="how-it-works__video" autoplay muted loop playsinline preload="metadata"
                             poster="./public/images/hiw/man-dog-poster.jpg">
                             <source src="./public/videos/man-dog.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="how-it-works__media-box second-box">
+                    <div class="how-it-works__media-box how-it-works__media-box--2">
                         <video class="how-it-works__video" autoplay muted loop playsinline preload="metadata"
                             poster="./public/images/hiw/woman-cat-poster.jpg">
                             <source src="./public/videos/woman-cat.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="how-it-works__media-box third-box">
+                    <div class="how-it-works__media-box how-it-works__media-box--3">
                         <video class="how-it-works__video" autoplay muted loop playsinline preload="metadata"
-                            poster="./public/images/hiw/Fulfillment-box-poster.jpg">
-                            <source src="./public/videos/Fulfillment-box.mp4" type="video/mp4">
+                            poster="./public/images/hiw/fulfillment-box-poster.jpg">
+                            <source src="./public/videos/fulfillment-box.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -694,8 +706,27 @@
         </div>
     </footer>
 
-    
+    <button class="chat-btn" aria-label="Open customer support chat">
+        <svg class="icon-chat" aria-hidden="true">
+            <use href="./public/images/icons/sprite.svg#icon-chat"></use>
+        </svg>
+    </button>
 
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            mobileMenu.classList.add('menu-overlay--active');
+        });
+
+        closeBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            mobileMenu.classList.remove('menu-overlay--active');
+        });
+    </script>
 </body>
 
 </html>
